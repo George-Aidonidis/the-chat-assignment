@@ -1,0 +1,25 @@
+{
+  "extends": "airbnb-base",
+  "plugins": [
+    "import",
+    "riot"
+  ],
+  "env": {
+    "mocha": true
+  },
+  "globals": {
+    "riot": true,
+    "opts": true
+  },
+  "rules": {
+    "strict": 0,
+    "indent": [
+      2,
+      2
+    ],
+    "eol-last": [
+      0
+    ],
+    "comma-dangle": 0
+  }
+}
