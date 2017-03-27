@@ -8,10 +8,10 @@ const createContact = require('./createContact');
 const updateContact = require('./updateContact');
 
 module.exports = [
-  getAllContacts, 
-  postContact, 
-  getContact, 
-  deleteContact, 
+  getAllContacts,
+  postContact,
+  getContact,
+  deleteContact,
   createContact,
   updateContact
 ];

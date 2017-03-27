@@ -9,11 +9,7 @@ module.exports = {
   handler: (request, reply) => {
     Contact
       .findById(request.params.id)
-      .then(contact => {
-        console.log(request.params.id);
-        console.log(contact);
-        reply.view('contactDetail', contact);
-      })
+      .then(contact => reply.view('contactDetail', contact))
       .catch(err => reply(Boom.badImplementation(err)));
   }
 };
