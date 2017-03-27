@@ -18,7 +18,7 @@ server.register([Vision, Inert], (err) => {
     engines: {
       tag: HapiRiot
     },
-    path: 'app/views',
+    path: 'app/tags',
     relativeTo: __dirname,
     compileOptions: {
       layoutPath: Path.join(__dirname, 'app/layout'),
@@ -28,6 +28,17 @@ server.register([Vision, Inert], (err) => {
   });
   server.route(routes);
 
+  server.route({
+    method: 'GET',
+    path: '/public/{path*}',
+    handler: {
+      directory: {
+        path: './app/public',
+        listing: false,
+        index: false
+      }
+    }
+  });
   server.route({
     method: 'GET',
     path: '/bundle.js',
