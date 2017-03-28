@@ -50,6 +50,6 @@ server.register([Vision, Inert], (err) => {
     if (err) {
       throw err;
     }
-    winston.log(`Server running at: ${server.info.uri}`);
+    winston.info(`Server running at: ${server.info.uri} with ${process.env.NODE_ENV} settings`);
   });
 });
