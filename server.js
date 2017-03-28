@@ -11,7 +11,7 @@ const routes = require('./app/routes');
 const config = require('./app/config')();
 
 const server = new Hapi.Server();
-server.connection({ port: config.server.port, host: config.server.host });
+server.connection({ port: config.server.port || 3000 });
 
 server.register([Vision, Inert], (err) => {
   Hoek.assert(!err, err);
