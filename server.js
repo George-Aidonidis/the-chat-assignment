@@ -8,10 +8,9 @@ const Vision = require('vision');
 const winston = require('winston');
 const HapiRiot = require('hapi-riot');
 const routes = require('./app/routes');
-const config = require('./app/config')();
 
 const server = new Hapi.Server();
-server.connection({ port: config.server.port || 3000 });
+server.connection({ port: process.env.PORT || 3000 });
 
 server.register([Vision, Inert], (err) => {
   Hoek.assert(!err, err);
