@@ -4,9 +4,10 @@
   "description": "The chat room assignment",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "prestart": "npm run compile",
+    "start": "NODE_ENV=production node server.js",
     "lint": "eslint app/*.js app/**/*.js",
-    "precompile": "npm run lint -s",
+    "prewatch": "npm run lint -s",
     "compile": "riot app/tags/ bundle.js -w",
     "watch": "nodemon server.js & npm run compile",
     "watch:server": "nodemon server.js"
