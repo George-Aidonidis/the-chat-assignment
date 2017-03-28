@@ -13,4 +13,6 @@ For local development, use the following:
 $ env MONGODB_URI='mongodb://localhost:27017' npm run watch:server
 ```
 
+Heroku [link](https://chatshop-phonebook.herokuapp.com/)
+
 _Developed for the purposes of `The Chat Shop`_

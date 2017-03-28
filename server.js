@@ -10,7 +10,7 @@ const HapiRiot = require('hapi-riot');
 const routes = require('./app/routes');
 
 const server = new Hapi.Server();
-server.connection({ port: process.env.PORT || 3000 });
+server.connection({ port: process.env.PORT || 4000 });
 
 server.register([Vision, Inert], (err) => {
   Hoek.assert(!err, err);
