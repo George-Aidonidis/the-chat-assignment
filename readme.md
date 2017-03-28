@@ -8,5 +8,9 @@ A simple phone book web-app created with `riot.js`, `hapi.js`. It allows the use
 * Clicking on a contact opens the `detail` page where the user can see all contact's details and edit the properties.
 * The create page allows the user to create a new contact.
 
+For local development, use the following:
+```bash
+$ env MONGODB_URI='mongodb://localhost:27017' npm run watch:server
+```
 
 _Developed for the purposes of `The Chat Shop`_

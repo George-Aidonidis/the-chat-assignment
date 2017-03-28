@@ -5,11 +5,9 @@ const Config = require('./../config')();
 const winston = require('winston');
 
 Mongoose.Promise = global.Promise;
-if (process.env.MONGOLAB_URI) {
-  Mongoose.connect(process.env.MONGOLAB_URI);
-} else {
-  Mongoose.connect(`mongodb://${Config.mongo.url}/${Config.mongo.database}`);
-}
+
+Mongoose.connect(process.env.MONGODB_URI);
+
 const db = Mongoose.connection;
 
 db.on('error', err => winston.error(err));
